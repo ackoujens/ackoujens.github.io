@@ -90,7 +90,7 @@ h6 {
   border-color: transparent;
 
   .navbar-brand {
-    color: $brand-primary;
+    //color: $brand-primary;
     @include script-font;
 
     &.active,
@@ -106,8 +106,10 @@ h6 {
   }
 
   .navbar-toggle {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
+    //background-color: $brand-primary;
+    //border-color: $brand-primary;
+    background-color: white;
+    border-color: white;
 
     .icon-bar {
       background-color: white;
@@ -116,6 +118,8 @@ h6 {
     &:focus,
     &:hover {
       background-color: $brand-primary;
+      border-color: $brand-primary;
+      color: white;
     }
   }
 
@@ -264,10 +268,12 @@ section {
 }
 
 // Services Section
-
-.service-heading {
-  margin: 15px 0;
-  text-transform: none;
+.service-item {
+  margin-bottom: 50px;
+  .service-heading {
+    margin: 15px 0;
+    text-transform: none;
+  }
 }
 
 // Portfolio Section
@@ -426,6 +432,20 @@ section {
         margin-top: 12px;
         line-height: 14px;
       }
+
+
+      a,
+      a.active,
+      a:active,
+      a:focus {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
     }
 
     &.timeline-inverted > .timeline-panel {
@@ -716,6 +736,93 @@ ul.social-buttons {
   outline: none;
 }
 
+.service-modal {
+  .modal-dialog{
+    margin: 0;
+    height: 100%;
+    width: auto;
+  }
+  .modal-content {
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 100%;
+    padding: 100px 0;
+    //text-align: center;
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 3em;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    p.item-intro {
+      margin: 20px 0 30px;
+      @include serif-font;
+      font-style: italic;
+      font-size: 16px;
+    }
+
+    ul.list-inline {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    img {
+      margin-bottom: 30px;
+    }
+  }
+
+  .close-modal {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    .lr {
+      height: 75px;
+      width: 1px;
+      margin-left: 35px;
+      background-color: $gray-darkest;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      /* Safari and Chrome */
+      z-index: 1051;
+
+      .rl {
+        height: 75px;
+        width: 1px;
+        background-color: $gray-darkest;
+        transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(90deg);
+        /* Safari and Chrome */
+        z-index: 1052;
+      }
+    }
+  }
+
+  .modal-backdrop {
+    opacity: 0;
+    display: none;
+  }
+}
+
 .portfolio-modal {
   .modal-dialog{
     margin: 0;
@@ -825,4 +932,116 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: $brand-primary;
+}
+
+
+
+
+#skills span {
+    top: -30px;
+    left: 2%;
+    position: relative;
+    font-size: 1.4em;
+    font-weight: bolder;
+    font-family: monospace;
+    color: #fff;
+}
+
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 2.5em;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0eaf0;
+}
+
+progress::-webkit-progress-value {
+    background-color: #329ad1;
+}
+
+progress::-moz-progress-bar {
+    background-color: #329ad1;
+}
+
+
+
+
+
+
+
+// TODO
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+  width:150px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
 }
