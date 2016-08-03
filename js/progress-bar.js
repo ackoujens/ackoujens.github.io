@@ -6,14 +6,3 @@ $('a.page-progress').bind('click', function(event) {
 		},3000);
 	});
 });
-
-var waypoint = new Waypoint({
-  element: document.getElementById('services'),
-  handler: function(direction) {
-    if(direction == "up")
-      $('a.color-swap').css('color', 'white');
-    if(direction == "down")
-      $('a.color-swap').css('color', 'black');
-      $('.active a.color-swap').css('color', 'white');
-  }
-})

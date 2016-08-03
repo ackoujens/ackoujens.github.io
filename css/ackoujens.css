@@ -3,7 +3,8 @@ body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .text-muted {
-  color: #777; }
+  color: #777;
+  margin-bottom: 30px; }
 
 .text-primary {
   color: #cc0000; }
@@ -168,6 +169,12 @@ h6 {
     padding: 10px 0; }
     .navbar-default.navbar-shrink .navbar-brand {
       font-size: 1.5em; } }
+@media (min-width: 768px) {
+  .navbar-custom.affix {
+    background-color: #222;
+    padding: 10px 0; }
+    .navbar-custom.affix .navbar-brand {
+      font-size: 1.5em; } }
 header {
   background-image: url("../img/header-bg.jpg");
   background-repeat: none;
@@ -230,12 +237,6 @@ section {
 @media (min-width: 768px) {
   section {
     padding: 150px 0; } }
-.service-item {
-  margin-bottom: 50px; }
-  .service-item .service-heading {
-    margin: 15px 0;
-    text-transform: none; }
-
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0; }
@@ -388,6 +389,8 @@ section {
       float: left;
       padding: 0 20px 20px 30px;
       text-align: right; }
+      .timeline > li .timeline-panel p {
+        margin-bottom: 20px; }
     .timeline > li .timeline-image {
       width: 100px;
       height: 100px;

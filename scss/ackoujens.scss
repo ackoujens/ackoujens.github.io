@@ -10,6 +10,7 @@ body {
 
 .text-muted {
   color: $gray;
+  margin-bottom: 30px;
 }
 
 .text-primary {
@@ -184,6 +185,18 @@ h6 {
   }
 }
 
+// Navbar Change on Scroll
+
+@media(min-width:768px) {
+    .navbar-custom.affix {
+        background-color: $gray-darkest;
+        padding: 10px 0;
+        .navbar-brand {
+            font-size: 1.5em;
+        }
+    }
+}
+
 header {
   background-image: url('../img/header-bg.jpg');
   background-repeat: none;
@@ -264,15 +277,6 @@ section {
 @media(min-width:768px) {
   section {
     padding: 150px 0;
-  }
-}
-
-// Services Section
-.service-item {
-  margin-bottom: 50px;
-  .service-heading {
-    margin: 15px 0;
-    text-transform: none;
   }
 }
 
@@ -507,6 +511,9 @@ section {
         float: left;
         padding: 0 20px 20px 30px;
         text-align: right;
+        p {
+          margin-bottom: 20px;
+        }
       }
 
       .timeline-image {
